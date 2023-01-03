@@ -5,15 +5,25 @@ export interface IUserRequest {
     isAdm: boolean
 }
 
-export interface IUser {
+export interface IUserResponse {
     id: string
     name: string
     email: string
     isAdm: boolean
     createdAt: Date
     updatedAt: Date
+    isActive: boolean
 }
 
+export interface IUser {
+    id: string
+    name: string
+    email: string
+    password?: string
+    isAdm: boolean
+    createdAt: Date
+    updatedAt: Date
+}
 
 export interface IUserLogin {
     email: string
@@ -24,4 +34,12 @@ export interface IUserUpdate {
     name?: string
     email?: string
     password?: string
+}
+
+export interface IDecoded {
+    isAdm: boolean,
+    id: string,
+    iat: number,
+    exp: number,
+    sub: string
 }

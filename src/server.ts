@@ -1,5 +1,5 @@
-import app from "./app";
-import AppDataSource from "./data-source";
+import app from "./app"
+import AppDataSource from "./data-source"
 
 (async () => {
 
@@ -9,6 +9,6 @@ import AppDataSource from "./data-source";
     })
     
     app.listen(3000, () => {
-        console.log("Servidor executando")
+        console.log("Server running")
     })    
 })()
