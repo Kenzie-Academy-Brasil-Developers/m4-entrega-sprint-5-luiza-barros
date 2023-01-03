@@ -8,8 +8,10 @@ import {
     BeforeInsert,
     BeforeUpdate,
     DeleteDateColumn,
-    BeforeRemove
+    BeforeRemove,
+    OneToMany
 } from "typeorm"
+import { SchedulesUsersProperties } from "./schedulesUsersProperties.entity"
 
 @Entity("users")
 class Users {
@@ -50,6 +52,9 @@ class Users {
     isActiveChanged() {
         this.isActive = false
     }
+
+    @OneToMany(() => SchedulesUsersProperties, schedulesUsersProperties => schedulesUsersProperties.users)
+    schedulesUsersProperties: SchedulesUsersProperties[]
 }
 
 export { Users }
