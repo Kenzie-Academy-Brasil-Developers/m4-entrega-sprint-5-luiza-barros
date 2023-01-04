@@ -36,7 +36,7 @@ class Properties {
     @OneToOne(() => Address) @JoinColumn()
     address: Address
 
-    @ManyToOne(() => Category, category => category.properties)
+    @ManyToOne(() => Category, { eager: true })
     category: Category
 
     @OneToMany(() => SchedulesUsersProperties, schedulesUsersProperties => schedulesUsersProperties.properties)

@@ -54,7 +54,7 @@ class Users {
     }
 
     @OneToMany(() => SchedulesUsersProperties, schedulesUsersProperties => schedulesUsersProperties.users)
-    schedulesUsersProperties: SchedulesUsersProperties[]
+    schedulesUsersProperties: SchedulesUsersProperties
 }
 
 export { Users }
