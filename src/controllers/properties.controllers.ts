@@ -12,7 +12,7 @@ const createPropertyController = async (req: Request, res: Response) => {
 
 const getAllPropertiesController = async (req: Request, res: Response) => {
     const allProperties = await getAllPropertiesService()
-    return res.status(201).json(allProperties)
+    return res.status(200).json(allProperties)
 }
 
 export {
