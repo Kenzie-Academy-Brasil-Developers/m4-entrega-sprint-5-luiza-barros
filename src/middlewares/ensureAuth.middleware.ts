@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 import "dotenv/config"
 import { AppError } from "../errors/AppError"
 
-const ensureUserExistsByEmailMiddleware = async (req: Request, res: Response, next: NextFunction) => {
+const ensureAuthMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const reqID = req.params.id
     let token = req.headers.authorization
     
@@ -35,4 +35,4 @@ const ensureUserExistsByEmailMiddleware = async (req: Request, res: Response, ne
     })
 }
 
-export default ensureUserExistsByEmailMiddleware
+export default ensureAuthMiddleware
