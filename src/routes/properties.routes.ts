@@ -6,7 +6,7 @@ import ensureZipCodeAndState from "../middlewares/ensureZipCodeAndState.middlewa
 
 const propertiesRoutes = Router()
 
-propertiesRoutes.post("", ensureAuthMiddleware, ensurePostPropertiesRequestAreValid, ensureZipCodeAndState,createPropertyController)
+propertiesRoutes.post("", ensureAuthMiddleware, ensurePostPropertiesRequestAreValid, ensureZipCodeAndState, createPropertyController)
 propertiesRoutes.get("", getAllPropertiesController)
 
 export default propertiesRoutes
