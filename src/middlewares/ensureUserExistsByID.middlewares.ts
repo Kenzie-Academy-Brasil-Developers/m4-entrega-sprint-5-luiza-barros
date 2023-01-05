@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express"
 import { Users } from "../entities/users.entity"
-import AppDataSource from "../data-source"
 import { AppError } from "../errors/AppError"
+import AppDataSource from "../data-source"
 
 const ensureUserExistsByIDMiddleware = async (req: Request, res: Response, next: NextFunction) => {
     const reqID: string = req.params.id

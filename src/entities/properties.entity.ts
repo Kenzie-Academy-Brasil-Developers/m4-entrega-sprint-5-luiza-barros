@@ -40,7 +40,7 @@ class Properties {
     category: Category
 
     @OneToMany(() => SchedulesUsersProperties, schedulesUsersProperties => schedulesUsersProperties.properties)
-    schedulesUsersProperties: SchedulesUsersProperties[]
+    schedules: SchedulesUsersProperties[]
 }
 
 export { Properties }
